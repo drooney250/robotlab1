@@ -15,8 +15,6 @@ class TheNode(object):
         self.message = balboaMotorSpeeds()
         self.message.left = (linear * 7.5) - (angular * 2.5)
         self.message.right = (linear * 7.5) + (angular * 2.5)
-        
-        #self.publisher.publish(message)
 
     def __init__(self):
         #Initialize the node
