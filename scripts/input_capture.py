@@ -4,8 +4,8 @@ from balboa_core.msg import balboaMotorSpeeds
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64
 
-LINEAR_MOVEMENT_RATE = 0.05
-ANGULAR_MOVEMENT_RATE = 0.5
+LINEAR_MOVEMENT_RATE = 0.15
+ANGULAR_MOVEMENT_RATE = 1.0
 
 class TheNode(object):
     def handle_vel_msg(self, msg):

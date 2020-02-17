@@ -4,7 +4,7 @@ from balboa_core.msg import balboaMotorSpeeds
 from std_msgs.msg import Float64
 
 MOTOR_SPEED_CAP = 20
-LINEAR_SPEED_SCALE = 0.0
+LINEAR_SPEED_SCALE = 0.5
 ANGULAR_SPEED_SCALE = 0.25
 
 class PIDNode(object):

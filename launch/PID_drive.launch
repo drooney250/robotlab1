@@ -5,11 +5,15 @@
         <remap from="current_state" to="ang_state"/>
         <remap from="pid_output" to="ang_pid_output"/>
         
-        <param name="p_term" type="double" value="1.75"/>
-        <param name="i_term" type="double" value="0.0"/>
-        <param name="d_term" type="double" value="1.0"/>
+        <node pkg="lab1" name="anglePID" type="PID.py">
+            <remap from="p_term" to="ang/p_term"/>
+            <remap from="i_term" to="ang/i_term"/>
+            <remap from="d_term" to="ang/d_term"/>
+        </node>
         
-        <node pkg="lab1" name="anglePID" type="PID.py"/>
+        <param name="ang/p_term" type="double" value="1.75"/>
+        <param name="ang/i_term" type="double" value="0.0"/>
+        <param name="ang/d_term" type="double" value="1.0"/>
     </group>
     
      <group>
@@ -17,7 +21,15 @@
         <remap from="current_state" to="dist_state"/>
         <remap from="pid_output" to="dist_pid_output"/>
         
-        <node pkg="lab1" name="distancePID" type="PID.py"/>
+        <node pkg="lab1" name="distancePID" type="PID.py">
+            <remap from="p_term" to="dist/p_term"/>
+            <remap from="i_term" to="dist/i_term"/>
+            <remap from="d_term" to="dist/d_term"/>
+        </node>
+        
+        <param name="dist/p_term" type="double" value="3.5"/>
+        <param name="dist/i_term" type="double" value="0.0"/>
+        <param name="dist/d_term" type="double" value="1.0"/>
     </group>
 
     <node pkg="balboa_core" name="balboa_serial" type="balboa_serial.py" />
