@@ -4,18 +4,19 @@ from balboa_core.msg import balboaMotorSpeeds
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64
 
-LINEAR_MOVEMENT_RATE = 0.15
-ANGULAR_MOVEMENT_RATE = 1.0
-
 class TheNode(object):
     def handle_vel_msg(self, msg):
         #Read linear and angular from new message
         linear = msg.linear.x
         angular = msg.angular.z
         
+	#read in constants from param server
+        linear_input_scaling = rospy.get_param("linear_input_scaling", 0.15)
+    	angular_input_scaling = rospy.get_param("angular_input_scaling", 1.0)
+
         #Aggregate into setpoints
-        self.linear_setpoint = self.linear_setpoint + (linear * LINEAR_MOVEMENT_RATE)
-        self.angular_setpoint = self.angular_setpoint + (angular * ANGULAR_MOVEMENT_RATE)
+        self.linear_setpoint = self.linear_setpoint + (linear * linear_input_scaling)
+        self.angular_setpoint = self.angular_setpoint + (angular * angular_input_scaling)
         
         #Create messages and publish to setpoint topics
         dist_message = Float64(self.linear_setpoint)

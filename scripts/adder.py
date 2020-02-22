@@ -7,7 +7,7 @@ MOTOR_SPEED_CAP = 20
 LINEAR_SPEED_SCALE = 0.5
 ANGULAR_SPEED_SCALE = 0.25
 
-class PIDNode(object):
+class AdderNode(object):
     def __init__(self):
         #initialize the node
         rospy.init_node('adder', anonymous=True)
@@ -60,7 +60,8 @@ class PIDNode(object):
     #Node main loop
     def main_loop(self):
         rospy.spin()
+	    
 
 if __name__ == '__main__':
-    a = PIDNode()
+    a = AdderNode()
     a.main_loop()

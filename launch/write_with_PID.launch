@@ -27,16 +27,16 @@
             <remap from="d_term" to="dist/d_term"/>
         </node>
         
-        <param name="dist/p_term" type="double" value="3.5"/>
-        <param name="dist/i_term" type="double" value="0.0"/>
-        <param name="dist/d_term" type="double" value="2.5"/>
+        <param name="dist/p_term" type="double" value="3.0"/>
+        <param name="dist/i_term" type="double" value="0.05"/>
+        <param name="dist/d_term" type="double" value="1.5"/>
     </group>
 
-    <param name="linear_input_scaling" type="double" value="0.25"/>
+    <param name="linear_input_scaling" type="double" value="1.0"/>
     <param name="angular_input_scaling" type="double" value="1.0"/>
 
     <node pkg="balboa_core" name="balboa_serial" type="balboa_serial.py" />
-    <node pkg="turtlesim" name="turtle_teleop" type="turtle_teleop_key" />
+    <node pkg="lab1" name="write_with_PID" type="write_with_PID.py" />
     <node pkg="lab1" name="input_capture" type="input_capture.py"/>
     <node pkg="lab1" name="convert_sensor_input" type="convert_sensor_input.py"/>
     <node pkg="lab1" name="adder" type="adder.py"/>
