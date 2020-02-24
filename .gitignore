@@ -1,0 +1,8 @@
+build/*
+
+devel/*
+
+.catkin_workspace
+
+src/cob_people_object_detection_tensorflow/*
+src/cob_perception_common/*
