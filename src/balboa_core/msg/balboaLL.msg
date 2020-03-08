@@ -17,3 +17,5 @@ int32 reflectance2
 int32 reflectance3
 int32 reflectance4
 int32 reflectance5
+
+int32 range

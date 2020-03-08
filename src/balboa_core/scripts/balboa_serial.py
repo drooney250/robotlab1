@@ -92,7 +92,8 @@ class TheNode(object):
       msg.reflectance3 = self.readFourByteAndChecksum()
       msg.reflectance4 = self.readFourByteAndChecksum()
       msg.reflectance5 = self.readFourByteAndChecksum()
-      
+      msg.range = self.readFourByteAndChecksum()
+
       # print("~~~~~~~")
       # print "should be 0: ", self.readFourByteAndChecksum()
       # print "should be -1: ", self.readFourByteAndChecksum()
