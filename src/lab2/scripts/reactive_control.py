@@ -6,7 +6,7 @@ from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64
 
 UPDATE_RATE = 30
-MAX_DRIVE_PER_SECOND = 1.5
+MAX_DRIVE_PER_SECOND = 3.0
 MAX_DRIVE_PER_UPDATE = MAX_DRIVE_PER_SECOND / UPDATE_RATE
 ALLOWABLE_ERROR = 2.0
 
