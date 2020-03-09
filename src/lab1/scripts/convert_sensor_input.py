@@ -4,7 +4,7 @@ from balboa_core.msg import balboaLL
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64
 
-TICKS_PER_DEGREE = 973.275
+TICKS_PER_DEGREE = 932.0
 TICKS_PER_INCH = 132.0
 
 class TheNode(object):

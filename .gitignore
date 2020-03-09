@@ -5,4 +5,10 @@ devel/*
 .catkin_workspace
 
 src/cob_people_object_detection_tensorflow/*
+src/cob_people_object_detection_tensorflow
+
 src/cob_perception_common/*
+src/cob_perception_common
+
+src/hw1/*
+src/hw1
